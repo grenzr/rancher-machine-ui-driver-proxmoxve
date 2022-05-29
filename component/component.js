@@ -44,9 +44,19 @@ export default Ember.Component.extend(NodeDriver, {
   bootstrap: function() {
     // bootstrap is called by rancher ui on 'init', you're better off doing your setup here rather then the init function to ensure everything is setup correctly
     let config = get(this, 'globalStore').createRecord({
-      type: '%%DRIVERNAME%%Config',
-      cpuCount: 2,
-      memorySize: 2048,
+      type: '%%DRIVERNAME%%Config',      
+      proxmoxHost: '192.168.178.17',
+      proxmoxNode: 'proxmox-dev',
+      proxmoxUserName: 'root',
+      proxmoxUserPassword: 'pass',
+      proxmoxRealm: 'pam',
+      proxmoxPool: 'docker-machine',
+      provisionStrategy: 'clone',
+      vmCloneVmid: 100,
+      vmCloneFull: 1,
+      vmMemory: 2,
+      sshUsername: 'ubuntu',
+      vmVmidRange: 8100,
     });
 
     set(this, 'model.%%DRIVERNAME%%Config', config);
