@@ -1,3 +1,4 @@
 .machine-driver.%%DRIVERNAME%% {
-  background-image: url('proxmox-logo-color-stacked.png');
+  background-image: url('%%DRIVERNAME%%.png');
+  background-size: 80%;
 }
