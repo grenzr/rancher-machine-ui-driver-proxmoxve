@@ -23,5 +23,7 @@ For other users to see your driver, you need to build it and host the output on 
 * Add a Machine Driver in Rancher 2.0 (Global -> Node Drivers)
   * Download URL: The URL for the driver binary (e.g. `https://github.com/deepshore/docker-machine-driver-proxmoxve/releases/download/v4.0.4-ds/docker-machine-driver-proxmoxve_4.0.4-ds_linux_amd64.tar.gz`)
   * Custom UI URL: The URL you uploaded the `dist` folder to, e.g. `https://github.com/deepshore/rancher-machine-ui-driver-proxmoxve/releases/download/v1.0.0-alpha/component.js`)
+  * Click on "+Add Domain" at section "Whitelist Domains"
+  * Enter "github.com" as whitelisted Domain
 * Wait for the driver to become "Active"
 * Go to Clusters -> Add Cluster, your driver and custom UI should show up.
