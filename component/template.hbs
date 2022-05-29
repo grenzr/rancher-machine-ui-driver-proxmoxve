@@ -3,29 +3,107 @@
     {{!-- This line shows the driver title which you don't have to change it --}}
     <div class="over-hr mb-20"><span>{{driverOptionsTitle}}</span></div>
 
-    {{!-- An example input option --}}
     <div class="row box mt-20">
       <h4>Instance Options</h4>
+
       <div class="row">
         <div class="col span-2 col-inline">
-          <label>CPUs</label>
-        </div>
-
-        <div class="col span-1">
-          {{config.cpuCount}}
-        </div>
-        <div class="col span-3">
-          {{input-slider value=config.cpuCount valueMin=1 valueMax=32}}
-        </div>
-
-        <div class="col span-2 col-inline">
-          <label>Memory Size</label>
+          <label>proxmoxHost</label>
         </div>
         <div class="col span-4">
-          <div class="input-group">
-            {{input-integer min=1 value=config.memorySize classNames="form-control"}}
-            <div class="input-group-addon bg-default">MB</div>
-          </div>
+          {{input value=config.proxmoxHost}}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col span-2 col-inline">
+          <label>proxmoxNode</label>
+        </div>
+        <div class="col span-4">
+          {{input value=config.proxmoxNode}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span-2 col-inline">
+          <label>proxmoxUserName</label>
+        </div>
+        <div class="col span-4">
+          {{input value=config.proxmoxUserName}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span-2 col-inline">
+          <label>proxmoxUserPassword</label>
+        </div>
+        <div class="col span-4">
+          {{input value=config.proxmoxUserPassword}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span-2 col-inline">
+          <label>proxmoxRealm</label>
+        </div>
+        <div class="col span-4">
+          {{input value=config.proxmoxRealm}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span-2 col-inline">
+          <label>proxmoxPool</label>
+        </div>
+        <div class="col span-4">
+          {{input value=config.proxmoxPool}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span-2 col-inline">
+          <label>provisionStrategy</label>
+        </div>
+        <div class="col span-4">
+          {{input value=config.provisionStrategy}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span-2 col-inline">
+          <label>vmCloneVmid</label>
+        </div>
+        <div class="col span-4">
+          {{input value=config.vmCloneVmid}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span-2 col-inline">
+          <label>vmCloneFull</label>
+        </div>
+        <div class="col span-4">
+          {{input value=config.vmCloneFull}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span-2 col-inline">
+          <label>sshUsername</label>
+        </div>
+        <div class="col span-4">
+          {{input value=config.sshUsername}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span-2 col-inline">
+          <label>vmMemory</label>
+        </div>
+        <div class="col span-1">
+          {{config.vmMemory}}
+        </div>
+        <div class="col span-3">
+          {{input-slider value=config.vmMemory valueMin=1 valueMax=32}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span-2 col-inline">
+          <label>vmVmidRange</label>
+        </div>
+        <div class="col span-4">
+          {{input value=config.vmVmidRange}}
         </div>
       </div>
     </div>

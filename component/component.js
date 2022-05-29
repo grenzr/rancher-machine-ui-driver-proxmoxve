@@ -44,7 +44,7 @@ export default Ember.Component.extend(NodeDriver, {
   bootstrap: function() {
     // bootstrap is called by rancher ui on 'init', you're better off doing your setup here rather then the init function to ensure everything is setup correctly
     let config = get(this, 'globalStore').createRecord({
-      type: '%%DRIVERNAME%%Config',      
+      type: '%%DRIVERNAME%%Config',
       proxmoxHost: '192.168.178.17',
       proxmoxNode: 'proxmox-dev',
       proxmoxUserName: 'root',
@@ -74,8 +74,8 @@ export default Ember.Component.extend(NodeDriver, {
     // Add more specific errors
 
     // Check something and add an error entry if it fails:
-    if ( parseInt(get(this, 'config.memorySize'), defaultRadix) < defaultBase ) {
-      errors.push('Memory Size must be at least 1024 MB');
+    if ( parseInt(get(this, 'config.vmMemory'), defaultRadix) < 1 ) {
+      errors.push('Memory Size must be at least 2 GB');
     }
 
     // Set the array of errors for display,
