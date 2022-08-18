@@ -54,7 +54,9 @@ export default Ember.Component.extend(NodeDriver, {
       provisionStrategy: 'clone',
       vmCloneVmid: 100,
       vmCloneFull: 1,
+      vmCpuCores: 2,
       vmMemory: 2,
+      vmStorageSize: 16,
       sshUsername: 'ubuntu',
       vmVmidRange: 8100,
     });
