@@ -89,6 +89,17 @@
       </div>
       <div class="row">
         <div class="col span-2 col-inline">
+          <label>vmCpuCores</label>
+        </div>
+        <div class="col span-1">
+          {{config.vmCpuCores}}
+        </div>
+        <div class="col span-3">
+          {{input-slider value=config.vmCpuCores valueMin=1 valueMax=32}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span-2 col-inline">
           <label>vmMemory</label>
         </div>
         <div class="col span-1">
@@ -96,6 +107,17 @@
         </div>
         <div class="col span-3">
           {{input-slider value=config.vmMemory valueMin=1 valueMax=32}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span-2 col-inline">
+          <label>vmStorageSize</label>
+        </div>
+        <div class="col span-1">
+          {{config.vmStorageSize}}
+        </div>
+        <div class="col span-4">
+          {{input-slider value=config.vmStorageSize valueMin=1 valueMax=100}}
         </div>
       </div>
       <div class="row">
