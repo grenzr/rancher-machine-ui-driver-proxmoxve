@@ -59,6 +59,7 @@ export default Ember.Component.extend(NodeDriver, {
       vmStorageSize: 16,
       vmStoragePath: 'rancher-disks',
       vmNetBridge: 'vmbr0',
+      vmNetTag: '',
       sshUsername: 'ubuntu',
       vmVmidRange: 8100,
     });
