@@ -52,6 +52,7 @@ export default Ember.Component.extend(NodeDriver, {
       proxmoxRealm: 'pam',
       proxmoxPool: 'docker-machine',
       provisionStrategy: 'clone',
+      vmStartOnboot: 0,
       vmCloneVmid: 100,
       vmCloneFull: 1,
       vmCpu: '',
